@@ -1,0 +1,32 @@
+part 1
+maksg@DESKTOP-PJM8TLT:~$ mkdir first
+maksg@DESKTOP-PJM8TLT:~$ cd first
+maksg@DESKTOP-PJM8TLT:~/first$ touch person.txt
+maksg@DESKTOP-PJM8TLT:~/first$ mv person.txt another.txt
+maksg@DESKTOP-PJM8TLT:~/first$ cp another.txt copy.txt
+maksg@DESKTOP-PJM8TLT:~/first$ rm copy.txt
+maksg@DESKTOP-PJM8TLT:~/first$ ..cd
+..cd: command not found
+maksg@DESKTOP-PJM8TLT:~/first$ cd ..
+maksg@DESKTOP-PJM8TLT:~$ ls
+first
+maksg@DESKTOP-PJM8TLT:~$ cp -r first second
+maksg@DESKTOP-PJM8TLT:~$ ls
+first  second
+maksg@DESKTOP-PJM8TLT:~$ rm -rf second
+maksg@DESKTOP-PJM8TLT:~$ ls
+first
+maksg@DESKTOP-PJM8TLT:~$
+
+part 2
+man command show you detail on the terminal command you select, you scroll with enter and get out with q
+-l flag makes it a long listing format,-a flag does not ignore entries that start with .
+you use alt left and right arrow keys
+you use control e
+you use control a
+you use control w 
+terminal is the program that provides a user interface, shell processes the commands
+specifying the location of a file or directory from the root directory
+a link that points to a file location on the page where the link is located
+a flag is a qsuedo command it helps with things the command can not do,ls -a to see all content in directory, cp -r used to copy a directory, and rm -rf is used to delete a directory that contains files
+-f flag ignores nonexistent files and arguments, -r flag removes directories and their contents recursively

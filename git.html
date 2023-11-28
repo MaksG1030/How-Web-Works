@@ -1,0 +1,123 @@
+maksg@DESKTOP-PJM8TLT:~$ mkdir learn_git_again
+maksg@DESKTOP-PJM8TLT:~$ cd learn_git_again
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ touch third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/maksg/learn_git_again/.git/
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git add third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git commit -m "adding third.txt"
+[master (root-commit) 05047e8] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git log
+commit 05047e8cf66d295cfe4569216fe88297d7dbe265 (HEAD -> master)
+Author: maksg <maksimiliang0330@outlook.com>
+Date:   Tue Oct 17 11:06:13 2023 -0400
+
+    adding third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ touch fourth.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ add fourth.txt
+Command 'add' not found, did you mean:
+  command 'dd' from deb coreutils (8.32-4.1ubuntu1)
+  command 'atd' from deb at (3.2.5-1ubuntu1)
+  command 'ldd' from deb libc-bin (2.35-0ubuntu3.1)
+  command 'pdd' from deb pdd (1.5-1)
+  command 'adr' from deb adr-tools (3.0.0-2)
+  command 'axd' from deb afnix (3.5.0-3)
+  command 'ddd' from deb ddd (1:3.3.12-5.3build1)
+  command 'and' from deb and (1.2.2-4.2)
+  command 'ad' from deb netatalk (3.1.12~ds-9build1)
+  command 'adb' from deb adb (1:10.0.0+r36-9)
+  command 'aid' from deb id-utils (4.6.28-20200521ss15dab)
+  command 'tdd' from deb devtodo (0.1.20+git20200830.0ad52b0-1)
+Try: sudo apt install <deb name>
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git add fourth.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git commit -m "adding fourth.txt"
+[master 9387e9b] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ rm third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ add rm third.txt
+Command 'add' not found, did you mean:
+  command 'ddd' from deb ddd (1:3.3.12-5.3build1)
+  command 'adb' from deb adb (1:10.0.0+r36-9)
+  command 'tdd' from deb devtodo (0.1.20+git20200830.0ad52b0-1)
+  command 'ad' from deb netatalk (3.1.12~ds-9build1)
+  command 'and' from deb and (1.2.2-4.2)
+  command 'dd' from deb coreutils (8.32-4.1ubuntu1)
+  command 'adr' from deb adr-tools (3.0.0-2)
+  command 'aid' from deb id-utils (4.6.28-20200521ss15dab)
+  command 'axd' from deb afnix (3.5.0-3)
+  command 'atd' from deb at (3.2.5-1ubuntu1)
+  command 'ldd' from deb libc-bin (2.35-0ubuntu3.1)
+  command 'pdd' from deb pdd (1.5-1)
+Try: sudo apt install <deb name>
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git add rm third.txt
+fatal: pathspec 'rm' did not match any files
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git log
+commit 9387e9b1fc2c3e2e5b2e4eef8a73719f081786be (HEAD -> master)
+Author: maksg <maksimiliang0330@outlook.com>
+Date:   Tue Oct 17 11:14:28 2023 -0400
+
+    adding fourth.txt
+
+commit 05047e8cf66d295cfe4569216fe88297d7dbe265
+Author: maksg <maksimiliang0330@outlook.com>
+Date:   Tue Oct 17 11:06:13 2023 -0400
+
+    adding third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git rm third.txt
+rm 'third.txt'
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git commit -m "removing third.txt"
+[master b9e3001] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git log
+commit b9e30017478a6924627fe8cd9c7c3b0ef2f31939 (HEAD -> master)
+Author: maksg <maksimiliang0330@outlook.com>
+Date:   Tue Oct 17 11:20:19 2023 -0400
+
+    removing third.txt
+
+commit 9387e9b1fc2c3e2e5b2e4eef8a73719f081786be
+Author: maksg <maksimiliang0330@outlook.com>
+Date:   Tue Oct 17 11:14:28 2023 -0400
+
+    adding fourth.txt
+
+commit 05047e8cf66d295cfe4569216fe88297d7dbe265
+Author: maksg <maksimiliang0330@outlook.com>
+Date:   Tue Oct 17 11:06:13 2023 -0400
+
+    adding third.txt
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git config --global core.pager=cat
+error: invalid key: core.pager=cat
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git config --global core.pager 'cat'
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$ git config --global --list
+user.email=maksimiliang0330@outlook.com
+user.name=maksg
+core.pager=cat
+maksg@DESKTOP-PJM8TLT:~/learn_git_again$
